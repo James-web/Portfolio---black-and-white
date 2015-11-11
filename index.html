@@ -1,0 +1,194 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>James's Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+
+<!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<!-- Add your site or application content here -->
+
+<body>
+    <header>
+        <nav class="nav-left">
+            <a href="#home">
+                <button class="nav-button">Home</button>
+            </a>
+            <a href="#about">
+                <button class="nav-button">About</button>
+            </a>
+        </nav>
+
+        <section>
+            <a href="#home"><img src="img/logo.png" class="logo"></a>
+        </section>
+
+        <nav class="nav-right">
+            <a href="#contact">
+                <button class="nav-button">Contact</button>
+            </a>
+            <a href="http://users.metropolia.fi/~duyn/CV2.pdf">
+                <button class="nav-button">Download CV</button>
+            </a>
+        </nav>
+    </header>
+    <div id="fullpage">
+        <div class="section" data-anchor="home">
+            <section class="cover">
+                <div class="cover-overlay">
+                    <h1><center>"The journey of a thousand miles<br>begins with a single step." <br>-Lao Tzu-</center></h1>
+                </div>
+
+            </section>
+
+            <article class="introduction">
+                <img src="img/portrait.jpg" alt="" class="portrait" id="portrait">
+
+                <button class="hello-btn" onclick="display_introduction()" id="hello_btn">Hello!</button>
+
+                <p id="self_introduction"></p>
+
+            </article>
+        </div>
+        <div class="section" data-anchor="about">
+            <section class="half-page-length">
+                <div class="thumbnail-item">
+                    <div class="thumbnail-image-wrapper">
+                        <img src="icon/MD-headphones-alt.png" alt="" class="thumbnail-image" id="music">
+                    </div>
+
+                    <div class="thumbnail-content-wrapper" onmouseover="hideBackground('music', 'music_desc')" onmouseout="showBackground('music', 'music_desc')">
+                        <p id="music_desc">I am an enthusiasm music listener. Some of my favorite bands and singers are:
+                            <br>
+                            <br>Lana Del Rey
+                            <br>Hurts
+                            <br>Imagine Dragon
+                            <br>Eagle
+                        </p>
+                    </div>
+                </div>
+
+                <div class="thumbnail-item">
+                    <div class="thumbnail-image-wrapper">
+                        <img src="icon/controls-alt-2.png" alt="" class="thumbnail-image" id="game">
+                    </div>
+
+                    <div class="thumbnail-content-wrapper" onmouseover="hideBackground('game', 'game_desc')" onmouseout="showBackground('game', 'game_desc')">
+                        <p id="game_desc">I love game as well. Used to be a game addict, but not anymore. Nowaday i still sometime play Dota 2, but most of the time i enjoyed climbing Hearthstone's ranking ladder</p>
+                    </div>
+
+                </div>
+
+                <div class="thumbnail-item">
+                    <div class="thumbnail-image-wrapper">
+                        <img src="icon/bicycle.png" alt="" class="thumbnail-image" id="travel">
+                    </div>
+
+                    <div class="thumbnail-content-wrapper" onmouseover="hideBackground('travel', 'travel_desc')" onmouseout="showBackground('travel', 'travel_desc')">
+                        <p id="travel_desc">Traveling the world and seeing new and facinating sights are my biggest dreams and wishes. Hopefully i will be able to set foot on as much place as possible before my legs are teared down.</p>
+                    </div>
+
+                </div>
+            </section>
+            <section class="half-page-length">
+                <div class="item-wrapper column">
+                    <div style="margin-bottom: 3vh;">
+                        <img src="icon/html5-plain.svg" alt="" class="small-icon">
+                        <img src="icon/android-plain.svg" alt="" class="small-icon">
+                        <img src="icon/bootstrap-plain.svg" alt="" class="small-icon">
+                        <img src="icon/git-plain.svg" alt="" class="small-icon">
+                    </div>
+
+                    <div>
+                        <img src="icon/css3-plain.svg" alt="" class="small-icon">
+                        <img src="icon/java-plain.svg" alt="" class="small-icon">
+                        <img src="icon/javascript-plain.svg" alt="" class="small-icon">
+                        <img src="icon/photoshop-plain.svg" alt="" class="small-icon">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="contact">
+            <section class="half-page-length column">
+                <center><img src="img/owl.gif" class="gif" alt=""></center>
+            </section>
+
+            <section class="half-page-length">
+                <div class="half-wrapper">
+                    <p>Give me a head scratch!</p>
+                    <div style="display:flex; height:20vh;align-items:center;width:40vw;justify-content:center;">
+                        <a href="https://www.facebook.com/Crit.Xoan" target="_blank"><img src="icon/facebook.png" alt="" class="smaller-icon"></a>
+                        <a href="https://instagram.com/pxxoan" target="_blank"><img src="icon/instagram.png" alt="" class="smaller-icon"></a>
+                        <a href="https://github.com/blackevil245" target="_blank"><img src="icon/github-2.png" alt="" class="smaller-icon"></a>
+                    </div>
+                </div>
+                <div style="display:flex;align-items:center;">
+                    <div style="border:1px solid black; height:40vh;"></div>
+                </div>
+                <div class="half-wrapper">
+                    <iframe width="80%" height="50%" src="https://www.youtube.com/embed/fyTfbtZeGeU?autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
+        </script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.fullPage.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#fullpage').fullpage();
+            });
+        </script>
+
+        <script>
+            var $root = $('html, body');
+            $('a').click(function () {
+                $root.animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 1000);
+                return false;
+            });
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                    function () {
+                        (b[l].q = b[l].q || []).push(arguments)
+                    });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script>
+</body>
+
+</html>

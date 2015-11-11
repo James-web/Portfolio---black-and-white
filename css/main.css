@@ -1,0 +1,641 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: none;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+body {}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 7vh;
+    font-family: 'Alice', serif;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    color: black;
+    text-decoration: inherit;
+}
+
+.fullpage {
+    display: block;
+    width: 98%;
+    margin-left: 1%;
+    position: absolute;
+    top: 7vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Alice', serif;
+}
+
+.logo {
+    height: 6vh;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    overflow: hidden;
+    display: flex;
+    max-height: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    margin-left: 3%;
+}
+
+.nav-right {
+    margin-right: 3%;
+}
+
+.nav-button {
+    background: none;
+    border: 1px solid black;
+    width: 150px;
+    height: 4vh;
+    margin: 6px;
+    transition: border 0.1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button:hover {
+    border: 3px solid black;
+}
+
+.cover {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../img/cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    object-fit: cover;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    border: 1px solid black;
+}
+
+.cover:hover {
+    opacity: 0.7;
+}
+
+.cover-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    z-index: 2;
+    transition: color 0.2s ease-in-out;
+}
+
+.cover-overlay:hover {
+    color: white;
+    opacity: 1;
+}
+
+.introduction {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    max-height: 60%;
+    border-radius: 150px;
+    overflow: hidden;
+    border: 1px solid black;
+    position: relative;
+    left: 9vw;
+}
+
+.introduction > p {
+    display: flex;
+    height: 100%;
+    max-width: 70%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    font-size: 17px;
+    transform: translateX(-10%)
+}
+
+.hello-btn {
+    background: none;
+    border: 1px solid black;
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    font-size: 20px;
+}
+
+.half-page-length {
+    display: flex;
+    width: 100%;
+    height: 48vh;
+    justify-content: center;
+    align-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.thumbnail-item {
+    border: 1px solid black;
+    width: 20%;
+    height: 35vh;
+    padding: 10px;
+    margin: 8vh 5vh 0 5vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.thumbnail-image-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.thumbnail-content-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.thumbnail-content-wrapper > p {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+    width: 90%;
+    text-align: center;
+}
+
+.thumbnail-image {
+    max-height: 100%;
+    max-width: 10vh;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+}
+
+.small-icon {
+    height: 10vh;
+    margin: 30px;
+    transition: height .25s ease-in-out;
+}
+
+.small-icon:hover {
+    height: 17vh;
+}
+
+.black-border {
+    border: 1px solid black;
+}
+
+.item-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.gif {
+    width: 40%;
+    object-fit: cover;
+}
+
+.half-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.half-wrapper > p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.smaller-icon {
+    height: 10vh;
+    transition: height .25s ease-in-out;
+}
+
+.smaller-icon:hover {
+    height: 13vh;
+    transition: height .25s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+    .introduction {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .portrait {
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        visibility: hidden;
+    }
+    .hello-btn {
+        background: none;
+        border: 1px solid black;
+        width: 60%;
+        height: 60%;
+        font-size: 20px;
+        position: relative;
+        z-index: 2;
+        top: 15vh;
+    }
+    .introduction > p {
+        height: 100vw;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+        font-size: 19px;
+        display: relative;
+        font-size: 2.3vh;
+        transform: translateY(-0%);
+    }
+    .small-icon {
+        height: 7vh;
+        margin: 12px;
+        transition: height .25s ease-in-out;
+    }
+    .small-icon:hover {
+        height: 10vh;
+        transition: height .25s ease-in-out;
+    }
+    .thumbnail-item {
+        border: 1px solid black;
+        width: 40%;
+        height: 20vh;
+        padding: 10px;
+        margin: 20vh 1vh 0 1vh;
+        overflow: hidden;
+        position: relative;
+    }
+    .nav-button {
+        width: 0;
+        border: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+    .nav-left,
+    .nav-right {
+        float: left;
+        overflow: hidden;
+        display: flex;
+        max-height: 80%;
+    }
+    .logo {
+        position: relative;
+        height: 50px;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        height: 60px;
+        font-family: 'Alice', serif;
+        justify-content: space-around;
+        z-index: 10;
+    }
+    .thumbnail-content-wrapper > p {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: 1s;
+        width: 90%;
+        text-align: center;
+        font-size: 0.7em;
+    }
+    .smaller-icon {
+        height: 8vh;
+        transition: height .25s ease-in-out;
+    }
+    .smaller-icon:hover {
+        height: 10vh;
+        transition: height .25s ease-in-out;
+    }
+    .half-wrapper > p {
+        font-size: 3vh;
+        text-align: center;
+    }
+    
+    .gif {
+    width: 80%;
+    object-fit: cover;
+}
+}
